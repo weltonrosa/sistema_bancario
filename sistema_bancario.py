@@ -83,16 +83,22 @@ while True:
             input()
 
     elif opcao == "3":
-        limpa_tela()
-        print("============= E X T R A T 0 =============\n\n")
-        print(f"\t\t{extrato}\n")
-        print(f"\tSaldo Atual R$ {saldo:.2f}\n\n")
-        print("=========================================\n")
-        print("Pressione <ENTER> para retornar ao menu.\n")
-        input()
+        if extrato != "":
+            limpa_tela()
+            print("============= E X T R A T 0 =============\n\n")
+            print(f"\t\t{extrato}\n")
+            print(f"\tSaldo Atual R$ {saldo:.2f}\n\n")
+            print("=========================================\n")
+            print("Pressione <ENTER> para retornar ao menu.\n")
+            input()
+        else:
+            limpa_tela()
+            print("\tNão foram realizadas movimentações!\n")
+            print("Pressione <ENTER> para retornar ao menu.\n")
+            input()
     elif opcao == "0":
         limpa_tela()
-        print("Obrigado por utilizar nosso sistema.\n\n")
+        print("\tObrigado por utilizar nosso sistema.\n\n")
         break
     else:
         limpa_tela()
